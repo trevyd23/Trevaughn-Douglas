@@ -11,7 +11,7 @@ const Navbar = () => {
 
 
   return (<>
-    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-14 sm:px-0 ' >
+    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-14 sm:px-0 xs ' >
     <Link href={'/'} className='flex flex-row items-center '>
         <Image src={logoTransparent} alt="Logo" className='rounded-full bg-white w-16 h-16' />
         <h1 className='text-xl text-white ml-2 flex flex-row w-72'>Trevaughn Douglas</h1>
