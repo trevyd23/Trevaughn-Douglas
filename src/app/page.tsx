@@ -2,27 +2,36 @@
 import { PortfolioSection } from '@/components/PortfolioSection'
 import strings from '@/utilities/strings'
 import { TypeAnimation } from 'react-type-animation'
-import Grad from '../../public/assets/grad.jpg'
+import { motion } from "framer-motion"
+import Me from '../../public/assets/me.jpg'
 import Image from 'next/image'
 import React from 'react'
 
 const Home = () => {
   return (<>
-    <div className='w-screen flex bg-black flex-col h-screen px-6 pt-3 md:px-24 md:pt-56'>
-      <div className='w-full mt-6'>
+    <div className='w-screen h-max flex bg-black flex-col  px-6 pt-3 md:px-24 md:pt-56'>
+      <motion.div className='w-full mt-6' 
+      initial={{x: 0, opacity: 0}} 
+      animate={{x: 10, opacity: 1}}
+      transition={{duration: 0.5}}
+      >
       <div className='w-20 border-4 border-cyan-800 mb-6'></div>
       <span className='text-white md:text-lg'>Hello, my name is</span>
       <h1 className='font-semibold text-white text-3xl md:text-5xl leading-relaxed md:w-[40%] md:leading-normal '>
         Trevaughn Douglas
       </h1>
       <span className='text-white md:text-lg'>Full Stack Devloper</span>
-      </div>
-      <div className='items-center justify-between mt-20 flex-row flex md:self-end md:mt-[-200px]'>
-      <Image src={Grad} alt='graduation' className='w-[180px] h-[180px] md:w-[400px] md:h-[400px] rounded-full self-end order-2' />
+      </motion.div>
+      <motion.div className='items-center justify-between mt-8 flex-row flex md:self-end md:mt-[-200px]'
+      initial={{x: 100, opacity: 0}}
+      animate={{x: 0, opacity: 1}}
+      transition={{ duration: 0.5 }}
+      >
+      <Image src={Me} alt='graduation' className='w-[180px] h-[180px] md:w-[300px] md:h-[300px] rounded-full self-end order-2 border-[0.4rem] border-white' />
       <button className='self-start mt-20 hover:bg-cyan-600 w-36 text-white bg-cyan-800 items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 md:hidden text-xs font-medium order-1'>
           <a href="/Resume.docx" download="Trevaughn Douglas">Download Resume</a>
         </button>
-        </div>
+        </motion.div>
       {/* <TypeAnimation
       className='mt-20 bg-slate-500'
       sequence={[
@@ -41,7 +50,7 @@ const Home = () => {
     /> */}
       {/* <Image src={Blob} alt='Blob' className='w-[500px] h-[500px]' />
       <Image src={me} alt="Profile" className='w-32 h-32 md:w-16 md:h-16 absolute top-[550px] ' /> */}
-      <h2></h2>
+      
      </div>
      <PortfolioSection />
      </>
