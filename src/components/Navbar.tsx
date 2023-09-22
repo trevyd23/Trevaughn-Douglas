@@ -27,7 +27,7 @@ const Navbar = () => {
         </button>
       </div>
       { showMenu &&
-      <div id="doubleDropdown" className='z-10 absolute top-28 right-3 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 items-center justify-center'>
+      <div id="doubleDropdown" className='z-10 absolute top-28 right-3 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#201f1f] items-center justify-center'>
         <ul className='py-2 text-sm text-gray-700 dark:text-gray-200 items-center justify-center' aria-labelledby='hamburgerMenu'>
           {
             links.map((link, index) => {
