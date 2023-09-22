@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
   return (<>
-    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-3 md:px-10 ' >
+    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-3 sm:px-10 md:px-5' >
       <Link href={'/'} className='flex flex-row items-center md:w-[30%]'>
         <Image src={logoTransparent} alt="Logo" className='rounded-full bg-white w-9 h-9 md:w-16 md:h-16' />
         <h1 className='text-sm md:text-lg text-white ml-2'>Trevaughn Douglas</h1>
@@ -49,7 +49,7 @@ const Navbar = () => {
             })
           }
         </ul>
-        <button className='hover:bg-cyan-600 w-36 hover:text-white bg-[#306ec3] text-white items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 text-xs font-medium'>
+        <button className='hover:bg-cyan-600 w-36 hover:text-white bg-[#306ec3] text-white items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 text-xs font-medium sm:ml-3'>
           <a href="/Resume.docx" download="Trevaughn Douglas">Download Resume</a>
         </button>
       </div>
