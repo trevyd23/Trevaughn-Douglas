@@ -32,7 +32,7 @@ const Navbar = () => {
           {
             links.map((link, index) => {
               return (
-                <li key={index} className={showMenu ? 'flex-col items-center block px-16 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white' : `hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-cyan-400' : 'text-white '} `}><Link onClick={() => setShowMenu(!showMenu)} href={`${index === 0 ? '/' : `/${link.toLowerCase()}`}`} >{link}</Link></li>
+                <li key={index} className={showMenu ? 'flex-col items-center block px-16 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white' : `hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link onClick={() => setShowMenu(!showMenu)} href={`${index === 0 ? '/' : `/${link.toLowerCase()}`}`} >{link}</Link></li>
               )
             })
           }
@@ -44,12 +44,12 @@ const Navbar = () => {
           {
             links.map((link, index) => {
               return (
-                <li key={index} className={`hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-cyan-800' : 'text-white '} `}><Link href={`${index === 0 ? '/' : `/${link.toLowerCase()}`}`} >{link}</Link></li>
+                <li key={index} className={`hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link href={`${index === 0 ? '/' : `/${link.toLowerCase()}`}`} >{link}</Link></li>
               )
             })
           }
         </ul>
-        <button className='hover:bg-cyan-600 w-36 hover:text-white bg-cyan-800 text-white items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 text-xs font-medium'>
+        <button className='hover:bg-cyan-600 w-36 hover:text-white bg-[#306ec3] text-white items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 text-xs font-medium'>
           <a href="/Resume.docx" download="Trevaughn Douglas">Download Resume</a>
         </button>
       </div>

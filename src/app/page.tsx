@@ -15,7 +15,7 @@ const Home = () => {
       animate={{x: 10, opacity: 1}}
       transition={{duration: 0.5}}
       >
-      <div className='w-20 border-4 border-cyan-800 mb-6'></div>
+      <div className='w-20 border-4 border-[#306ec3] mb-6'></div>
       <span className='text-white md:text-lg'>Hello, my name is</span>
       <h1 className='font-semibold text-white text-3xl md:text-5xl leading-relaxed md:w-[40%] md:leading-normal '>
         Trevaughn Douglas
