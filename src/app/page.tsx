@@ -9,6 +9,7 @@ import LinkedIn from '../../public/assets/linkedin.png'
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
+import { SkillsAndExpertise } from '@/components/SkillsAndExpertise'
 
 const Home = () => {
   return (<>
@@ -65,6 +66,7 @@ const Home = () => {
       
      </div>
      <PortfolioSection />
+     <SkillsAndExpertise />
      </>
   )
 }
