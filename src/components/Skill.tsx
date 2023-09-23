@@ -16,7 +16,7 @@ export const Skill = ({ percentage, label }: SkillInterface) => {
         }, 300)
     }, [percentage])
     return (
-        <div className='w-[6rem] h-[6rem] mx-8 flex flex-col items-center sm:w-[10rem] sm:h-[11rem]  '>
+        <div className='w-[6rem] h-[6rem] mx-8 my-5 flex flex-col items-center sm:w-[8rem] sm:h-[8rem]  '>
             <CircularProgressbar   value={desiredVal} text={`${percentage}%`}
               styles={buildStyles({
                 // Rotation of path and trail, in number of turns (0-1)

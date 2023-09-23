@@ -13,10 +13,14 @@ const Navbar = () => {
 
 
   return (<>
-    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-3 sm:px-10 md:px-5 sticky top-0 z-20' >
+    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-9 sm:px-10 md:px-5 sticky top-0 z-20' >
       <Link href={'/'} className='flex flex-row items-center md:w-[40%]'>
-        <Image src={logo} width={100} height={80} alt="Logo" />
-        <h1 className='text-sm md:text-lg text-white ml-2'>Trevaughn Douglas</h1>
+        {/* <Image src={logo} width={100} height={80} alt="Logo" /> */}
+        <div className='w-8 flex flex-row items-center'>
+        <span className='text-white text-3xl font-mono'>TD</span>
+        <div className='w-2 border-4 border-[#306ec3] rounded-full mt-5' />
+        </div>
+        <h1 className='hidden md:flex text-sm md:text-lg text-white ml-10'>Trevaughn Douglas</h1>
       </Link>
       <div className="w-12 md:hidden md:w-0 lg:hidden lg:w-0 ">
         <button onClick={() => setShowMenu(!showMenu)} id='hamburgerMenu' data-dropdown-toggle="doubleDropdown" type="button" 

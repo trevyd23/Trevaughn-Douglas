@@ -37,9 +37,9 @@ export const SkillsAndExpertise = () => {
     percentage: 82
   }]
   return (
-    <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col '>
-    <h1 className='text-white text-3xl font-bold mt-[10rem] leading-loose'>Skills And Expertise</h1>
-    <div className='w-[100%] h-[30rem] flex flex-row items-center flex-wrap sm:justify-center'>
+    <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col flex-wrap '>
+    <h1 className='text-white text-3xl mt-6 font-bold leading-loose sm:mb-10'>Skills And Expertise</h1>
+    <div className='w-[100%] h-max flex flex-row items-center flex-wrap sm:justify-center '>
     {
       skills.map((skill, index) => <Skill label={skill.skillName} percentage={skill.percentage} key={index} />)
     }
