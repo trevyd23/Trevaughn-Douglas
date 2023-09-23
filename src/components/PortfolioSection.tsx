@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Dweller from '../../public/assets/Dweller.jpg'
 import UCarry from '../../public/assets/UCarry.png'
@@ -18,8 +19,8 @@ export const PortfolioSection = () => {
   ]
   return (
     <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col '>
-      <h1 className='text-white text-2xl font-bold mt-[10rem]'>Portfolio</h1>
-      <h2 className='text-white text-lg font-thin mt-9'>Check out my side projects!</h2>
+      <h1 className='text-white text-3xl font-bold mt-[10rem] leading-loose'>Portfolio</h1>
+      <h2 className='text-white text-lg font-thin mt-9'>Check out my personal projects!</h2>
       <div className='w-full flex flex-col items-center md:flex-row justify-center mt-24 '>
       {
         projects.map((project, index) => {

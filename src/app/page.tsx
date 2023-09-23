@@ -4,8 +4,11 @@ import strings from '@/utilities/strings'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from "framer-motion"
 import Me from '../../public/assets/me.jpg'
+import GitHub from '../../public/assets/githubIcon.png'
+import LinkedIn from '../../public/assets/linkedin.png'
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 const Home = () => {
   return (<>
@@ -21,6 +24,15 @@ const Home = () => {
         Trevaughn Douglas
       </h1>
       <span className='text-white md:text-lg'>Full Stack Devloper</span>
+      <div className='w-30 flex items-center flex-row mt-5'>
+        <Link href={'https://github.com/trevyd23'}>
+        <Image src={GitHub} alt='Github' className='w-[30px] h-[30px] bg-white rounded-lg' />
+        </Link>
+        <Link href={'https://www.linkedin.com/in/trevaughn-douglas-640336120/'}>
+        <Image src={LinkedIn} alt='LinkedIn' className='w-[30px] h-[30px] bg-white rounded-lg ml-5' />
+        </Link>
+
+      </div>
       </motion.div>
       <motion.div className='items-center justify-between mt-8 flex-row flex md:self-end md:mt-[-200px]'
       initial={{x: 100, opacity: 0}}

@@ -3,18 +3,19 @@ import React, { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import logoTransparent from '../../public/assets/logoTransparent.png'
+import logo from '../../public/assets/logoBlack.png'
 import Link from 'next/link'
 
-const links = ['Home', 'About', 'Portfolio', 'Contact']
+const links = ['Home', 'Skills & Expertise', 'Portfolio', 'Contact']
 const Navbar = () => {
   const pathname = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 
 
   return (<>
-    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-3 sm:px-10 md:px-5' >
-      <Link href={'/'} className='flex flex-row items-center md:w-[30%]'>
-        <Image src={logoTransparent} alt="Logo" className='rounded-full bg-white w-9 h-9 md:w-16 md:h-16' />
+    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-3 sm:px-10 md:px-5 sticky top-0 z-20' >
+      <Link href={'/'} className='flex flex-row items-center md:w-[40%]'>
+        <Image src={logo} width={100} height={80} alt="Logo" />
         <h1 className='text-sm md:text-lg text-white ml-2'>Trevaughn Douglas</h1>
       </Link>
       <div className="w-12 md:hidden md:w-0 lg:hidden lg:w-0 ">
