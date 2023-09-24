@@ -6,7 +6,7 @@ import logoTransparent from '../../public/assets/logoTransparent.png'
 import logo from '../../public/assets/logoBlack.png'
 import Link from 'next/link'
 
-const links = ['Home', 'Skills & Expertise', 'Portfolio', 'Contact']
+const links = ['Home','Portfolio','Skills And Expertise', 'Contact']
 const Navbar = () => {
   const pathname = usePathname()
   const [showMenu, setShowMenu] = useState(false)
@@ -49,7 +49,7 @@ const Navbar = () => {
           {
             links.map((link, index) => {
               return (
-                <li key={index} className={`hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link href={`${index === 0 ? '/' : `/${link.toLowerCase()}`}`} >{link}</Link></li>
+                <li key={index} className={`hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link href={`${index === 0 ? '/' : `/${link.toLowerCase().replaceAll(' ', '')}`}`} >{link}</Link></li>
               )
             })
           }

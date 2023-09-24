@@ -31,20 +31,20 @@ export const Card = ({ appImage, appLink, appName, appDescription }: PortfolioAp
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.9 }}
-      className='w-[30rem] h-[50rem] bg-[#201f1f] rounded-xl m-6 flex flex-col items-center px-5 md:hidden'>
-      <span className='text-3xl mt-4'>{appName}</span>
-      <p className='leading-5 mt-5 text-sm text-justify mb-8'>{appDescription}</p>
-      <div className='flex flex-row w-[100%] justify-center'>
-        <Link href={appLink[0]} className='flex flex-row items-center m-5'>
+      className={`w-[30rem] h-[${appName.includes('UCarry') ? '40rem' : '42rem'}]  bg-[#201f1f] rounded-xl m-6 flex flex-col items-center px-3 md:hidden`}>
+      <span className='text-3xl mt-2'>{appName}</span>
+      <p className='leading-5 mt-2 text-sm text-justify mb-3'>{appDescription}</p>
+      <div className='flex flex-row w-[100%] justify-center m-1'>
+        <Link href={appLink[0]} className='flex flex-row items-center '>
           <Image src={AppleIcon} alt='appstoreLink' className='w-[30px] h-[30px]' />
           <span className='hover:text-[#306ec3] ml-5'>{`App Store >`}</span>
         </Link>
-        <Link href={appLink[1]} className='flex flex-row items-center'>
+        <Link href={appLink[1]} className='flex flex-row items-center ml-5'>
           <Image src={GooglePlay} alt='appstoreLink' className='w-[30px] h-[30px]' />
           <span className='hover:text-[#306ec3] ml-5'>{`Play Store >`}</span>
         </Link>
       </div>
-      <Image src={appImage} alt='appImage' className='w-[70rem] h-[30rem] rounded-lg mt-6' />
+      <Image src={appImage} alt='appImage' className='w-[70rem] h-[26rem] rounded-lg mt-3' />
     </motion.div>
   </>
   )
