@@ -20,7 +20,7 @@ const Navbar = () => {
         <span className='text-white text-3xl font-mono'>TD</span>
         <div className='w-2 border-4 border-[#306ec3] rounded-full mt-5' />
         </div>
-        <h1 className='hidden md:flex text-sm md:text-lg text-white ml-10'>Trevaughn Douglas</h1>
+        <h1 className='hidden text-sm md:text-lg text-white ml-10 md:hidden'>Trevaughn Douglas</h1>
       </Link>
       <div className="w-12 md:hidden md:w-0 lg:hidden lg:w-0 ">
         <button onClick={() => setShowMenu(!showMenu)} id='hamburgerMenu' data-dropdown-toggle="doubleDropdown" type="button" 
@@ -44,8 +44,8 @@ const Navbar = () => {
           </ul>
       </div>
 }
-      <div className=' hidden items-center md:justify-between w-28 h-16 justify-center md:flex md:w-[65%]'>
-        <ul className='flex flex-col  md:flex md:flex-row'>
+      <div className=' hidden items-center sm:hidden md:justify-between w-28 h-16 justify-center md:flex md:w-[85%] md:items-center '>
+        <ul className='flex flex-col  md:flex md:flex-row md:items-center'>
           {
             links.map((link, index) => {
               return (
@@ -54,7 +54,7 @@ const Navbar = () => {
             })
           }
         </ul>
-        <button className='hover:bg-cyan-600 w-36 hover:text-white bg-[#306ec3] text-white items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 text-xs font-medium sm:ml-3'>
+        <button className='hover:bg-cyan-600 w-36 hover:text-white bg-[#306ec3] text-white items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 text-xs font-medium sm:ml-3 md:ml-12'>
           <a href="/Resume.docx" download="Trevaughn Douglas">Download Resume</a>
         </button>
       </div>

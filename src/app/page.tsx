@@ -14,7 +14,7 @@ import ContactSection from '@/components/ContactSection'
 
 const Home = () => {
   return (<>
-    <div className='w-screen h-max flex bg-black flex-col  px-6 pt-3 md:px-24 md:pt-56'>
+    <div className='w-screen h-max flex bg-black flex-col  px-6 pt-3 md:px-10 md:pt-56'>
       <motion.div className='w-full mt-6' 
       initial={{x: 0, opacity: 0}} 
       animate={{x: 10, opacity: 1}}
@@ -25,7 +25,7 @@ const Home = () => {
       <h1 className='font-semibold text-white text-3xl md:text-5xl leading-relaxed md:w-[40%] md:leading-normal '>
         Trevaughn Douglas
       </h1>
-      <span className='text-white md:text-lg'>Full Stack Devloper</span>
+      <span className='text-white md:text-lg'>Full Stack Developer</span>
       <div className='w-30 flex items-center flex-row mt-5'>
         <Link href={'https://github.com/trevyd23'}>
         <Image src={GitHub} alt='Github' className='w-[30px] h-[30px] bg-white rounded-lg' />
@@ -47,7 +47,7 @@ const Home = () => {
         </button>
         </motion.div>
       {/* <TypeAnimation
-      className='mt-20 bg-slate-500'
+      className='mt-20'
       sequence={[
         // Same substring at the start will only be typed out once, initially
         'FrontEnd',

@@ -15,6 +15,10 @@
     .header {
       @apply text-white text-3xl font-bold mt-[10rem] leading-loose
     }
+    .responsive-input {
+      @apply bg-transparent  border-b  w-[12rem] py-0  h-[2.5rem] focus:h-[3rem]  outline-none focus:border-[#306ec3] focus:text-white focus:placeholder:text-xs focus:placeholder:absolute focus:placeholder:top-[-0.29rem] focus:placeholder:left-0 focus:placeholder:text-[#306ec3] duration-700 hover:border-[#306ec3]
+
+    }
 
 
 }

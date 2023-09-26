@@ -40,7 +40,7 @@ export const SkillsAndExpertise = () => {
     percentage: 88
   }]
   return (
-    <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col flex-wrap md:h-screen '>
+    <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col flex-wrap  '>
     <h1 className='header sm:mb-10'>Skills And Expertise</h1>
     <div className='w-[100%] h-max flex flex-row items-center flex-wrap sm:justify-center '>
     {
