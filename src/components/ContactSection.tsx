@@ -23,9 +23,6 @@ export default function ContactSection() {
     const handleSubmit = useCallback(async (e: React.MouseEvent) => {
         e.preventDefault()
         setLoading(true)
-        setTimeout(() => {
-            console.log('delaying')
-        }, 100000)
         try {
             await fetch("/api/email", {
                 method: "POST",
@@ -34,7 +31,6 @@ export default function ContactSection() {
             setLoading(false)
         } catch (error) {
             setLoading(false)
-            console.log('error', error)
         }
 
 
