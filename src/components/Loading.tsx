@@ -33,7 +33,7 @@ const loadingCircleTransition = {
 export default function Loading() {
     return (
         <motion.div
-            className='w-[20%] h-[35%] z-30 items-center justify-center flex  absolute top-[158rem] left-[35rem] right-0 bottom-0 flex-row '
+            className='w-[20%] h-[25%] z-30 items-center justify-center flex  absolute top-[158rem] left-[35rem] right-0 bottom-0 flex-row bg-gray-500 py-10'
             variants={loadingContainerVariants}
             initial="start"
             animate="end"

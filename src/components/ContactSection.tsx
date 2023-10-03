@@ -2,6 +2,10 @@
 import React, { useCallback, useState } from 'react'
 import Loading from './Loading'
 import { TailSpin } from 'react-loader-spinner'
+import Notification from './Notification'
+import {AiFillCheckCircle} from 'react-icons/ai'
+import {BiSolidErrorAlt} from 'react-icons/bi'
+import strings from '@/utilities/strings'
 
 export default function ContactSection() {
     const [formState, setFormState] = useState({
@@ -11,6 +15,8 @@ export default function ContactSection() {
         message: ''
     })
     const [isLoading, setLoading] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [showNotification, setShowNotification] = useState(false)
 
 
     const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,13 +30,17 @@ export default function ContactSection() {
         e.preventDefault()
         setLoading(true)
         try {
-            await fetch("/api/email", {
+           const res = await fetch("/api/email", {
                 method: "POST",
                 body: JSON.stringify({ email: formState.email, message: formState.message, fullname: formState.fullName, phoneNumber: formState.phoneNumber }),
             })
             setLoading(false)
+            setShowNotification(true)
+            res.status === 200 ? setSuccess(true) : setSuccess(false)
         } catch (error) {
             setLoading(false)
+            setSuccess(false)
+            setShowNotification(true)
         }
 
 
@@ -39,7 +49,8 @@ export default function ContactSection() {
 
     return (
         <section className='w-screen h-max bg-black flex justify-center flex-col items-center px-5 '>
-            {isLoading && <Loading />}
+            {/* {isLoading && <Loading />} */}
+            {showNotification && <Notification notificationToggle={setShowNotification} icon={success ? AiFillCheckCircle : BiSolidErrorAlt} message={success ? strings.successMessage : strings.errorMessage} status={success ? 'confirmation' : 'error'} />}
             <h1 className='header'>Get in touch</h1>
 
             <h2 className='text-white text-lg leading-10 text-justify px-5 mt-5 mb-6'>Feel free to send me a message. I look forward to working on our next great project together!</h2>
@@ -72,6 +83,7 @@ export default function ContactSection() {
                         required
                         placeholder='Email'
                         className='responsive-input w-[100%] mt-5 text-white md:mt-0 md:w-60 lg:w-[40%]'
+                        
                     />
                     <input
                         name="message"
@@ -81,7 +93,7 @@ export default function ContactSection() {
                         className='responsive-input w-[100%] text-white mt-5 md:mt-3 md:w-64 lg:w-[42%]'
                     />
                 </div>
-                <button className=' mt-10 mb-5 hover:bg-cyan-600 w-36 text-white bg-[#306ec3] items-center justify-center rounded-lg h-11 text-xs font-medium order-1' onClick={(e) => handleSubmit(e)}>
+                <button className={`mt-10 mb-5 ${ !isLoading && 'hover:bg-cyan-600'} w-36 text-white bg-[#306ec3] items-center justify-center rounded-lg h-11 text-xs font-medium order-1 `} disabled={isLoading} onClick={(e) => { isLoading ? () => {} : handleSubmit(e)}}>
                     {isLoading ? <TailSpin
                         height="35"
                         width="35"
