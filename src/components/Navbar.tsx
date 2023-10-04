@@ -17,7 +17,7 @@ const Navbar = () => {
     }else if(link === 'Skills And Expertise') {
       // console.log('link', link)
       // console.log('true')
-      return('/'+'skillsandexpertise')
+      return('/'+'skills')
     }else if(link.includes('Contact')) {
       return('/'+link.toLocaleLowerCase())
     }
