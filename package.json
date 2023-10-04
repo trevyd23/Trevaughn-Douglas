@@ -2,7 +2,9 @@
   "name": "tredzy",
   "version": "0.1.0",
   "private": true,
-  "cacheDirectories": [".next/cache"],
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "engines": {
     "node": "19.9.0"
   },
@@ -38,6 +40,7 @@
     "react-icons": "^4.11.0",
     "react-loader-spinner": "^5.4.5",
     "react-type-animation": "^3.1.0",
+    "sharp": "^0.32.6",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
