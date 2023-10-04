@@ -12,14 +12,14 @@ type Props = {
 }
 
 export default function Notification({ message, status, icon, notificationToggle }: Props) {
-    // useEffect(() => {
-    //     let timer:NodeJS.Timer
+    useEffect(() => {
+        let timer:NodeJS.Timer
 
-    //     timer = setTimeout(() => {
-    //         notificationToggle(false)
-    //     }, 5000)
-    //     return () => clearTimeout(timer)
-    // }, [notificationToggle])
+        timer = setTimeout(() => {
+            notificationToggle(false)
+        }, 5000)
+        return () => clearTimeout(timer)
+    }, [notificationToggle])
     
     return (
         <motion.div 

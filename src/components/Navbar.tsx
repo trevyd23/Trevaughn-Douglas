@@ -66,7 +66,7 @@ const Navbar = () => {
           }
         </ul>
         <button className='hover:bg-cyan-600 w-36 hover:text-white bg-[#306ec3] text-white items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 text-xs font-medium sm:ml-3 md:ml-12'>
-          <a href="/Resume.docx" download="Trevaughn Douglas">Download Resume</a>
+          <a href="/Resume.pdf" download="Trevaughn Douglas">Download Resume</a>
         </button>
       </div>
     </nav>
