@@ -14,7 +14,9 @@ const Navbar = () => {
   const configureLinks = (link:string):string => {
     if(link.includes('Portfolio')) {
       return('/'+link.toLocaleLowerCase())
-    }else if(link.includes('Skills And Expertise')) {
+    }else if(link === 'Skills And Expertise') {
+      // console.log('link', link)
+      // console.log('true')
       return('/'+'skillsandexpertise')
     }else if(link.includes('Contact')) {
       return('/'+link.toLocaleLowerCase())
