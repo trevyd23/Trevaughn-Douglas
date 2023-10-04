@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import { IconType } from 'react-icons'
 import { MdClear } from 'react-icons/md'
 import { motion } from "framer-motion"
@@ -11,12 +12,21 @@ type Props = {
 }
 
 export default function Notification({ message, status, icon, notificationToggle }: Props) {
+    // useEffect(() => {
+    //     let timer:NodeJS.Timer
+
+    //     timer = setTimeout(() => {
+    //         notificationToggle(false)
+    //     }, 5000)
+    //     return () => clearTimeout(timer)
+    // }, [notificationToggle])
+    
     return (
         <motion.div 
         initial={{x: 0, opacity: 0}} 
         animate={{x: 10, opacity: 1}}
         transition={{duration: 0.5}}
-        className=' w-[28rem] h-[4rem] flex flex-row z-30 absolute top-[240rem] sm:top-[250rem] md:top-[195rem] lg:top-[180rem] left-5 px-5 shadow-lg'
+        className=' w-[22rem] h-[4rem] sm:w-[28rem] sm:h-[4rem] flex flex-row z-30 absolute top-[260rem] left-1 sm:top-[255rem] md:top-[195rem] lg:top-[180rem] sm:left-5 px-5 shadow-lg'
         >
             <div className={`w-[.35rem] h-full border ${status === 'confirmation' ? 'bg-green-700' : 'bg-red-600'} rounded-md flex z-10 absolute ` } />
             <div className='flex flex-row bg-white items-center px-8 border-l-0'>

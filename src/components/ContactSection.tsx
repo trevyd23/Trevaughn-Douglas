@@ -16,7 +16,7 @@ export default function ContactSection() {
     })
     const [isLoading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
-    const [showNotification, setShowNotification] = useState(false)
+    const [showNotification, setShowNotification] = useState(true)
 
 
     const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {

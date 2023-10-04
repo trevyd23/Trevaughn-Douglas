@@ -36,13 +36,13 @@ const Home = () => {
 
       </div>
       </motion.div>
-      <motion.div className='items-center justify-between mt-8 flex-row flex md:self-end md:mt-[-200px]'
+      <motion.div className='items-center justify-between mt-8 sm:mt-4 flex-row flex md:self-end md:mt-[-200px]'
       initial={{x: 100, opacity: 0}}
       animate={{x: 0, opacity: 1}}
       transition={{ duration: 0.5 }}
       >
-      <Image src={Me} priority alt='graduation' className='w-[180px] h-[180px] md:w-[300px] md:h-[300px] rounded-full self-end order-2 border-[0.4rem] border-white' />
-      <button className='self-start mt-20 hover:bg-cyan-600 w-36 text-white bg-[#306ec3] items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 md:hidden text-xs font-medium order-1'>
+      <Image src={Me} priority alt='graduation' className='w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[300px] md:h-[300px] rounded-full self-end order-2 border-[0.4rem] border-white' />
+      <button className='self-start mt-14 hover:bg-cyan-600 w-36 text-white bg-[#306ec3] items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 md:hidden text-xs font-medium order-1'>
           <a href="/Resume.docx" download="Trevaughn Douglas">Download Resume</a>
         </button>
         </motion.div>

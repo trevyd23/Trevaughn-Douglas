@@ -11,9 +11,20 @@ const Navbar = () => {
   const pathname = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 
+  const configureLinks = (link:string):string => {
+    if(link.includes('Portfolio')) {
+      return('/'+link.toLocaleLowerCase())
+    }else if(link.includes('Skills And Expertise')) {
+      return('/'+'skillsandexpertise')
+    }else if(link.includes('Contact')) {
+      return('/'+link.toLocaleLowerCase())
+    }
+    return '/'
+  }
+
 
   return (<>
-    <nav className='w-screen bg-black h-24 p-4 flex flex-row items-center justify-between px-9 sm:px-10 md:px-5 sticky top-0 z-20' >
+    <nav className='w-full bg-black h-24 p-4 flex flex-row items-center justify-between px-9 sm:px-10 md:px-5 sticky top-0 z-20' >
       <Link href={'/'} className='flex flex-row items-center md:w-[40%]'>
         {/* <Image src={logo} width={100} height={80} alt="Logo" /> */}
         <div className='w-8 flex flex-row items-center'>
@@ -24,7 +35,7 @@ const Navbar = () => {
       </Link>
       <div className="w-12 md:hidden md:w-0 lg:hidden lg:w-0 ">
         <button onClick={() => setShowMenu(!showMenu)} id='hamburgerMenu' data-dropdown-toggle="doubleDropdown" type="button" 
-        className="resume-button" aria-controls="navbar-sticky" aria-expanded="false">
+        className="hamburger-menu-button" aria-controls="navbar-sticky" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
@@ -37,19 +48,19 @@ const Navbar = () => {
           {
             links.map((link, index) => {
               return (
-                <li key={index} className={showMenu ? 'flex-col items-center block px-16 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white' : `hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link onClick={() => setShowMenu(!showMenu)} href={`${index === 0 ? '/' : `/${link.toLowerCase()}`}`} >{link}</Link></li>
+                <li key={index} className={showMenu ? 'flex-col items-center block px-16 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white' : `hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link onClick={() => setShowMenu(!showMenu)} href={configureLinks(link)} >{link}</Link></li>
               )
             })
           }
           </ul>
       </div>
 }
-      <div className=' hidden items-center sm:hidden md:justify-between w-28 h-16 justify-center md:flex md:w-[85%] md:items-center '>
+      <div className='hidden items-center sm:hidden md:justify-between w-28 h-16 justify-center md:flex md:w-[85%] md:items-center '>
         <ul className='flex flex-col  md:flex md:flex-row md:items-center'>
           {
             links.map((link, index) => {
               return (
-                <li key={index} className={`hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link href={`${index === 0 ? '/' : `/${link.toLowerCase().replaceAll(' ', '')}`}`} >{link}</Link></li>
+                <li key={index} className={`hover:underline underline-offset-8 decoration-2 decoration-white ${index === 0 ? 'ml-0' : 'ml-10'} ${pathname.includes(link.toLocaleLowerCase()) || (index === 0 && pathname.charAt(1) === '') ? 'text-[#306ec3]' : 'text-white '} `}><Link href={configureLinks(link)} >{link}</Link></li>
               )
             })
           }

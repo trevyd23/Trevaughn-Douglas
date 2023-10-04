@@ -18,7 +18,7 @@ export const PortfolioSection = () => {
     {appName: 'UCarry', appLink: ['https://apps.apple.com/us/app/ucarry/id6447766335', 'https://play.google.com/store/apps/details?id=com.travel_express_fe'], appImage: UCarry, appDescription: strings.ucarryDescription}
   ]
   return (
-    <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col '>
+    <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col  '>
       <h1 className='text-white text-3xl font-bold mt-[10rem] leading-loose'>Portfolio</h1>
       <h2 className='text-white text-lg font-thin mt-9'>Check out my personal projects!</h2>
       <div className='w-full flex flex-col items-center md:flex-row justify-center mt-24 '>

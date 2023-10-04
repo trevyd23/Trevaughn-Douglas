@@ -31,9 +31,9 @@ export const Card = ({ appImage, appLink, appName, appDescription }: PortfolioAp
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.9 }}
-      className={`w-[30rem] h-[${appName.includes('UCarry') ? '40rem' : '42rem'}]  bg-[#201f1f] rounded-xl m-6 flex flex-col items-center px-3 md:hidden`}>
+      className={`w-[22rem] sm:w-[32rem] ${appName.includes('UCarry') ? 'h-[33rem]' : 'h-[39rem]'} bg-[#201f1f] rounded-xl m-20 flex flex-col items-center px-2 sm:px-5 md:hidden`}>
       <span className='text-3xl mt-2'>{appName}</span>
-      <p className='leading-5 mt-2 text-sm text-justify mb-3'>{appDescription}</p>
+      <p className='leading-5 mt-2 text-sm  mb-3 sm:mt-8 sm:text-base'>{appDescription}</p>
       <div className='flex flex-row w-[100%] justify-center m-1'>
         <Link href={appLink[0]} className='flex flex-row items-center '>
           <Image src={AppleIcon} alt='appstoreLink' className='w-[30px] h-[30px]' />
@@ -44,7 +44,7 @@ export const Card = ({ appImage, appLink, appName, appDescription }: PortfolioAp
           <span className='hover:text-[#306ec3] ml-5'>{`Play Store >`}</span>
         </Link>
       </div>
-      <Image src={appImage} alt='appImage' className='w-[70rem] h-[26rem] rounded-lg mt-3' />
+      <Image src={appImage} alt='appImage' className='w-[70rem] h-[20rem] rounded-lg mt-3 sm:mt-5 sm:w-[20rem] sm:h-[15rem]' />
     </motion.div>
   </>
   )
