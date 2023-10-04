@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Image from 'next/image'
 import Link from 'next/link'
 import AppleIcon from '../../public/assets/appleWhite.png'
-import GooglePlay from '../../public/assets/googleplay.png'
+import GooglePlay from '../../public/assets/googlePlay.png'
 
 export const Card = ({ appImage, appLink, appName, appDescription }: PortfolioApplication) => {
   return (<>
