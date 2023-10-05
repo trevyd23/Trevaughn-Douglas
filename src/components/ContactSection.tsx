@@ -78,8 +78,8 @@ export default function ContactSection() {
 
             <form className='w-[100%] h-[38rem] md:w-[80%] flex items-center justify-center flex-col bg-[#201f1f] px-5 rounded-2xl mb-10 md:h-[25rem] '>
                 <h3 className='mt-10 text-lg text-white mb-5 md:mt-2'>Contact Form</h3>
-                <div className='w-[100%] flex flex-col items-center justify-center md:flex-row md:justify-between md:px-5'>
-                    <div className='flex flex-col w-full'>
+                <div className='w-[100%] flex flex-col items-center justify-center md:flex-row md:justify-center md:px-2'>
+                    <div className='flex flex-col w-full items-center'>
                     <input
                         type='text'
                         name='fullName'
@@ -89,12 +89,12 @@ export default function ContactSection() {
                         }}
                         required
                         placeholder='Full Name'
-                        className={`responsive-input w-[100%] text-white md:w-60 lg:w-[40%] ${errors?.fullName && 'border-red-500'}`}
+                        className={`responsive-input w-[100%] text-white md:w-60 lg:w-[60%] ${errors?.fullName && 'border-red-500'}`}
                     />
                     {errors && errors.fullName && <span className='errorInputMessage'>{errors.fullName._errors[0]}</span> }
                     </div>
 
-                    <div className='flex flex-col w-full'>
+                    <div className='flex flex-col w-full items-center'>
                     <input
                         type='text'
                         name='phoneNumber'
@@ -104,13 +104,13 @@ export default function ContactSection() {
                         }}
                         required
                         placeholder='Phone Number'
-                        className={`responsive-input w-[100%] mt-5 text-white md:mt-3 md:w-64 lg:w-[42%] ${errors?.phoneNumber && 'border-red-500'}`}
+                        className={`responsive-input w-[100%] mt-5 text-white md:mt-3 md:w-64 lg:w-[60%] ${errors?.phoneNumber && 'border-red-500'}`}
                     />
                     {errors && errors.phoneNumber ? <span className='errorInputMessage'>{errors.phoneNumber._errors[0]}</span> : <div> </div>}
                     </div>
                 </div>
-                <div className='w-[100%] flex flex-col items-center justify-center md:flex-row md:justify-between md:px-5'>
-                <div className='flex flex-col w-full'>
+                <div className='w-[100%] flex flex-col items-center justify-center md:flex-row md:justify-between md:px-2'>
+                <div className='flex flex-col w-full items-center'>
                     <input
                         type='email'
                         name='email'
@@ -120,12 +120,12 @@ export default function ContactSection() {
                         }}
                         required
                         placeholder='Email'
-                        className={`responsive-input w-[100%] mt-5 text-white md:mt-0 md:w-60 lg:w-[40%] ${errors?.email && 'border-red-500'}`}
+                        className={`responsive-input w-[100%] mt-5 text-white md:mt-0 md:w-60 lg:w-[60%] ${errors?.email && 'border-red-500'}`}
                         
                     />
                     {errors && errors.email ? <span className='errorInputMessage'>{errors.email._errors[0]}</span> : <div> </div>}
                     </div>
-                    <div className='flex flex-col w-full'>
+                    <div className='flex flex-col w-full items-center'>
                     <input
                         name="message"
                         onChange={(e) => {
@@ -134,7 +134,7 @@ export default function ContactSection() {
                         }}
                         required
                         placeholder='Message'
-                        className={`responsive-input w-[100%] text-white mt-5 md:mt-3 md:w-64 lg:w-[42%] ${errors?.message && 'border-red-500'}`}
+                        className={`responsive-input w-[100%] text-white mt-5 md:mt-3 md:w-64 lg:w-[60%] ${errors?.message && 'border-red-500'}`}
                     />
                     {errors && errors.message ? <span className='errorInputMessage'>{errors.message._errors[0]}</span> : <div> </div>}
                     </div>
