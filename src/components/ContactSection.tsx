@@ -1,5 +1,5 @@
 "use client"
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { ZodError, ZodFormattedError, z } from 'zod'
 import Loading from './Loading'
 import { TailSpin } from 'react-loader-spinner'
@@ -53,6 +53,7 @@ export default function ContactSection() {
             setShowNotification(true)
             res.status === 200 ? setSuccess(true) : setSuccess(false)
         } catch (error) {
+            console.log('error', error)
             if(error instanceof ZodError) {
                 setErrors(error.format())
                 setLoading(false)
@@ -71,7 +72,7 @@ export default function ContactSection() {
     return (
         <section className='w-screen h-max bg-black flex justify-center flex-col items-center px-5 '>
             {/* {isLoading && <Loading />} */}
-            {showNotification && <Notification notificationToggle={setShowNotification} icon={success ? AiFillCheckCircle : BiSolidErrorAlt} message={success ? strings.successMessage : strings.errorMessage} status={success ? 'confirmation' : 'error'} />}
+             <Notification notificationToggle={setShowNotification} icon={success ? AiFillCheckCircle : BiSolidErrorAlt} message={success ? strings.successMessage : strings.errorMessage} status={success ? 'confirmation' : 'error'} showNotification={showNotification} />
             <h1 className='header'>Get in touch</h1>
 
             <h2 className='text-white text-lg leading-10 text-justify px-5 mt-5 mb-6'>Feel free to send me a message. I look forward to working on our next great project together!</h2>
