@@ -75,7 +75,7 @@ export default function ContactSection() {
              <Notification notificationToggle={setShowNotification} icon={success ? AiFillCheckCircle : BiSolidErrorAlt} message={success ? strings.successMessage : strings.errorMessage} status={success ? 'confirmation' : 'error'} showNotification={showNotification} />
             <h1 className='header'>Get in touch</h1>
 
-            <h2 className='text-white text-lg leading-10 text-justify px-5 mt-5 mb-6'>Feel free to send me a message. I look forward to working on our next great project together!</h2>
+            <h2 className='text-white text-lg leading-10 text-justify px-5 sm:px-24 mt-5 mb-6 '>Feel free to send me a message. I look forward to working on our next great project together!</h2>
 
             <form className='w-[100%] h-[38rem] md:w-[80%] flex items-center justify-center flex-col bg-[#201f1f] px-5 rounded-2xl mb-10 md:h-[25rem] '>
                 <h3 className='mt-10 text-lg text-white mb-5 md:mt-2'>Contact Form</h3>
