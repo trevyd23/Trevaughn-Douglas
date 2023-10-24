@@ -53,7 +53,6 @@ export default function ContactSection() {
             setShowNotification(true)
             res.status === 200 ? setSuccess(true) : setSuccess(false)
         } catch (error) {
-            console.log('error', error)
             if(error instanceof ZodError) {
                 setErrors(error.format())
                 setLoading(false)
