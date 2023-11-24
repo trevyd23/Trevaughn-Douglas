@@ -40,7 +40,7 @@ const Home = () => {
       transition={{ duration: 0.5 }}
       >
       <Image src={Me} priority alt='graduation' className='w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[300px] md:h-[300px] rounded-full self-end order-2 border-[0.4rem] border-white' />
-      <button className='self-start mt-14 hover:bg-cyan-600 w-36 text-white bg-[#306ec3] items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 md:hidden text-xs font-medium order-1' onClick={() => console.log('tapped')}>
+      <button className='self-start mt-14 hover:bg-cyan-600 w-36 text-white bg-[#306ec3] items-center justify-center rounded-lg h-11 lg:ml-8 xl:ml-11 md:hidden text-xs font-medium order-1'>
           <a href="/FinalResume.pdf" download="Trevaughn Douglas">Download Resume</a>
         </button>
         </motion.div>
