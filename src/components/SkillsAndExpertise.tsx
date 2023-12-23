@@ -13,7 +13,7 @@ export const SkillsAndExpertise = () => {
     percentage: 85
   }, {
     skillName: 'JAVA',
-    percentage: 75
+    percentage: 85
   }, {
     skillName: 'REACT',
     percentage: 99
@@ -22,7 +22,7 @@ export const SkillsAndExpertise = () => {
     percentage: 99
   }, {
     skillName: 'TailWind CSS',
-    percentage: 75
+    percentage: 80
   }, {
     skillName: 'NodeJS',
     percentage: 99
@@ -31,13 +31,23 @@ export const SkillsAndExpertise = () => {
     percentage: 85
   }, {
     skillName: 'SQL',
-    percentage: 75
+    percentage: 83
   }, {
     skillName: 'GraphQL',
     percentage: 82
   },{
     skillName: 'SpringBoot',
     percentage: 88
+  },
+  {
+    skillName: 'AWS',
+    percentage: 75
+  },{
+    skillName: 'Docker',
+    percentage: 80
+  },{
+    skillName: 'Kubernetes',
+    percentage: 80
   }]
   return (
     <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col flex-wrap  '>

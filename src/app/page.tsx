@@ -23,7 +23,7 @@ const Home = () => {
       <h1 className='font-semibold text-white text-3xl md:text-5xl leading-relaxed md:w-[40%] md:leading-normal '>
         Trevaughn Douglas
       </h1>
-      <span className='text-white md:text-lg'>Full Stack Developer</span>
+      <span className='text-white md:text-lg'>Full Stack Engineer</span>
       <div className='w-30 flex items-center flex-row mt-5'>
         <Link href={'https://github.com/trevyd23'}>
         <Image src={GitHub} alt='Github' className='w-[30px] h-[30px] bg-white rounded-lg' />

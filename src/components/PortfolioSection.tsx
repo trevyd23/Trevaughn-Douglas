@@ -2,6 +2,7 @@
 import React from 'react'
 import Dweller from '../../public/assets/Dweller.jpg'
 import UCarry from '../../public/assets/UCarry.png'
+import DragAndDrop from '../../public/assets/DragAndDrop.png'
 import { StaticImageData } from 'next/image'
 import { Card } from './Card'
 import strings from '@/utilities/strings'
@@ -15,7 +16,8 @@ export interface PortfolioApplication {
 export const PortfolioSection = () => {
   const projects: PortfolioApplication[] = [
     {appName: 'DwellerJA', appLink: ['https://apps.apple.com/us/app/dwellerja/id1614094787', 'https://play.google.com/store/apps/details?id=com.smartestatejafe&pli=1'],appImage: Dweller, appDescription: strings.dwellerDescription},
-    {appName: 'UCarry', appLink: ['https://apps.apple.com/us/app/ucarry/id6447766335', 'https://play.google.com/store/apps/details?id=com.travel_express_fe'], appImage: UCarry, appDescription: strings.ucarryDescription}
+    {appName: 'UCarry', appLink: ['https://apps.apple.com/us/app/ucarry/id6447766335', 'https://play.google.com/store/apps/details?id=com.travel_express_fe'], appImage: UCarry, appDescription: strings.ucarryDescription},
+    {appName: 'Drag-And-Drop', appLink: ['https://www.npmjs.com/package/@trevyd23/drag-and-drop', 'https://github.com/trevyd23/drag-and-drop/pkgs/npm/drag-and-drop'], appImage: DragAndDrop, appDescription: 'Drag and drop UI library' }
   ]
   return (
     <section className='w-screen h-max bg-black text-white items-center justify-center flex flex-col  '>

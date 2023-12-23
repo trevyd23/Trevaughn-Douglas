@@ -19,6 +19,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Trevaughn Douglas',
   description: `Trevaughn's Portfolio Website.`,
+  alternates: {
+    canonical: 'https://www.trevaughndouglas.com/'
+  },
   icons: [{ rel: "apple-touch-icon", url: '/assets/apple-touch-icon.png' },
   { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/assets/favicon-32x32.png' },
   { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/assets/favicon-16x16.png' },
